@@ -1,0 +1,20 @@
+<?php
+    session_start();
+    $title = 'DigiGen.com - Генератор случайных чисел';
+    require 'header.php';
+    //попробовать добавить стили через span
+?>
+<!--    <span class="my-span">PRIVET</span>-->
+    <div class="account container mt-4" style="font-size: 30px">Random number:<div/>
+    <div class="account container mt-4" style="font-size: 30px"><?=$_SESSION['randomNumber']?></div>
+    <div class="account container mt-4">
+    <form action="index_check.php" method="post">
+        <input type="number" name="min" placeholder="from" class="form-control"><br>
+        <input type="number" name="max" placeholder="up to" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Generate</button>
+    </form>
+    </div>
+<?php
+
+    require 'footer.php';
+?>
